@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>4AEC2DC5-69C1-4300-BEB0-112B1A0EE5F1</string>
+	<string>52B482C7-AE9B-4D60-BB8D-E0BC58781C7D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>remoteNation</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>040F548E-96F3-4BB3-AC29-FD39672A2F10</key>
+		<key>1FA5137B-C83C-4FD8-966C-1A9E3BE1201E</key>
 		<string>https://github.com/geobir/remotenation.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>remoteNation/platforms/ios/remoteNation.xcodeproj/project.xcworkspace</string>
+	<string>platforms/ios/remoteNation.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>040F548E-96F3-4BB3-AC29-FD39672A2F10</key>
-		<string>../../../../..</string>
+		<key>1FA5137B-C83C-4FD8-966C-1A9E3BE1201E</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/geobir/remotenation.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>040F548E-96F3-4BB3-AC29-FD39672A2F10</string>
+	<string>1FA5137B-C83C-4FD8-966C-1A9E3BE1201E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>040F548E-96F3-4BB3-AC29-FD39672A2F10</string>
+			<string>1FA5137B-C83C-4FD8-966C-1A9E3BE1201E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>remotenation</string>
+			<string>remoteNation-mobile</string>
 		</dict>
 	</array>
 </dict>
