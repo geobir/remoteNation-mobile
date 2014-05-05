@@ -47,9 +47,11 @@ body
     border: 1px solid #22252a;
 }
 
-.play
+.btn-pause{ background: url(../img/pause.png) no-repeat top left;}
+.btn-play{ background: url(../img/play.png) no-repeat top left;}
+
+.btn-play, .btn-pause
 {
-    background: url(../img/play.png) no-repeat top left;
     background-size: 100%;
     content: "";
     width: 30px;
@@ -60,3 +62,15 @@ body
 
 
 
+.btn-next{background: url(../img/next.png) no-repeat top left; right: 0;}
+.btn-prev{background: url(../img/prev.png) no-repeat top left; left: 0;}
+
+.btn-next, .btn-prev
+{
+    background-size: 100%;
+    top:40%;
+    content: "";
+    position: absolute;
+    width: 60px;
+    height : 60px;
+}

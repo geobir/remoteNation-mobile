@@ -8,6 +8,21 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Remote Nation</title>
+        <script type="text/javascript">
+
+            function actionPlay(current)
+            {
+                var desktopServers = ['http://e2r4p2.42.fr:4242/'];
+                changeState(current);
+            }
+            function changeState(current)
+            { 
+                if (current.className == 'btn-play')
+                    $(current).addClass('btn-pause').removeClass('btn-play');
+                else
+                    $(current).addClass('btn-play').removeClass('btn-pause');
+            }
+        </script>
     </head>
     <body>
         <section class="view" ng-view>
