@@ -18,9 +18,9 @@
             function changeState(current)
             { 
                 if (current.className == 'btn-play')
-                    $(current).addClass('btn-pause').removeClass('btn-play');
+                    current.className = "btn-pause";
                 else
-                    $(current).addClass('btn-play').removeClass('btn-pause');
+                    current.className = "btn-play";
             }
         </script>
     </head>
