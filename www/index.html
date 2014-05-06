@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,  height=device-height, target-densitydpi=device-dpi" />
-        <preference name="UIViewControllerBasedStatusBarAppearance" value="false" />
+        <preference name="websecurity" value="disable" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Remote Nation</title>
@@ -12,8 +12,10 @@
         <script type="text/javascript" src="js/vendors/angular.min.js"></script>
         <script type="text/javascript" src="js/vendors/angular-route.min.js"></script>
         <script type="text/javascript" src="js/vendors/jquery.min.js"></script>
+        <script type="text/javascript" src="js/vendors/fastclick.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/remote.js"></script>
+
 
         <script type="text/javascript">
 
@@ -23,7 +25,10 @@
 
             function actionPlay(current)
             {
-                currentMac.play();
+                if (current.className == 'btn-play')
+                    currentMac.play();
+                else
+                    currentMac.pause();
                 changeState(current);
             }
 
@@ -33,11 +38,39 @@
                     current.className = "btn-pause";
                 else
                     current.className = "btn-play";
-            }
+            }  
 
+            function actionLog()
+            {
+                console.log("LOL:");
+                var url = "hhtps://api.streamnation.com/api/v1/auth";
+                var postData = {identity: document.getElementById('log-identity').value, password: document.getElementById('log-password').value};
+
+                $.ajax({
+                    type: "POST",
+                    url: "https://api.streamnation.com/api/v1/auth",
+                    data: postData,
+                    success: function(data)
+                    {
+                        alert(JSON.stringify(data));
+                        console.log(data);
+                    },
+                    error: function(data)
+                    {
+                        alert("lose");
+                        alert(this.type);
+                        alert(JSON.stringify(data));
+                    }
+                });
+            }
         </script>
     </head>
     <body>
+        <form methode="POST" action"#" id="log">
+            <div class="inputext">ID: <input type="text" id="log-identity" name="identity"></div>
+            <div class="inputext">PASS: <input type="password" id="log-password" name="password"></div>
+            <input type="submit" value="log" onClick="actionLog();">
+        </form>
         <section class="view" ng-view>
         </section>
 

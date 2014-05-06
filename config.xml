@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.mantikgames.remotenation" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>remoteNation</name>
+<widget id="com.mantikgames.remotenation" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Remote Nation</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Remote for Stream nation.
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+        Remote Nation Team
     </author>
     <content src="index.html" />
-    <access origin="*" />
+	<access origin="*" subdomains="true"/>
+	<preference name="websecurity" value="disable" />
 </widget>
