@@ -58,9 +58,8 @@ body
     height : 30px;
     display: block;
     margin: 10px auto;
+    border: 0;
 }
-
-
 
 .btn-next{background: url(../img/next.png) no-repeat top left; right: 0;}
 .btn-prev{background: url(../img/prev.png) no-repeat top left; left: 0;}
