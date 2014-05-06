@@ -13,17 +13,17 @@
         <script type="text/javascript" src="js/vendors/angular-route.min.js"></script>
         <script type="text/javascript" src="js/vendors/jquery.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/remote.js"></script>
 
         <script type="text/javascript">
 
-            var Remote = require('js/remote.js');
-            var desktopServers = ['http://e2r4p2.42.fr:4242/'];
+            var desktopServers = ['http://e2r4p2.42.fr:4242'];
 
             currentMac = new Remote(desktopServers[0]);
 
             function actionPlay(current)
             {
-                Remote.play();
+                currentMac.play();
                 changeState(current);
             }
 
