@@ -3,23 +3,45 @@ body
     text-align: center;
 }
 
+.title
+{
+    color: #22252a;
+    text-transform:uppercase;
+}
+
+body
+{
+    background: #3b647a;
+    //box-shadow: inset 0 0 300px rgba(0,0,0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.logo
+{
+    margin: 20px;
+    width: 30%;
+}
+
 .lecteur
 {
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    background-color: #15171a;
+    background-color: #22252a;
     width: 100%;
     overflow: hidden;
+    padding: 0;
 }
 
 .lecteur button, .lecteur .progress
 {
-    margin: 5px auto;
+    margin: 20px auto;
 }
 
 .lecteur .progress
 {
-    height: 10px;
+    height: 30px;
     width: 80%;
     border-radius: 0;
 }
@@ -33,7 +55,8 @@ body
 .cover
 {
     width: 85%;
-    height: 85vw;
+    height: 70vw;
+    max-height: 628px;
     margin: 0 auto;
     position: absolute;
     left: 7.5%;
@@ -54,10 +77,10 @@ body
 {
     background-size: 100%;
     content: "";
-    width: 30px;
-    height : 30px;
+    width: 50px;
+    height : 50px;
     display: block;
-    margin: 10px auto;
+    margin: 0 auto;
     border: 0;
 }
 
@@ -76,5 +99,32 @@ body
 
 #log
 {
-    margin: 30px;
+    position: absolute;
+    width: 80%;
+    margin: 0; padding: 0;
+    font-size: 1.5em;
+    top: 40%;
+    left: 10%;
+    text-align: right;
+}
+
+input[type="text"], input[type="password"]
+{
+    height: 40px;
+    width: 60%;
+    margin: 10px;
+}
+
+.log
+{
+    width: 100%;
+    text-align: center;
+    display: block;
+    background: #22252a;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.log:hover
+{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9), inset 0 0 20px rgba(255, 255, 255, 0.1);
 }
