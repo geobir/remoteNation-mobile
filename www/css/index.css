@@ -55,12 +55,12 @@ body
 .cover
 {
     width: 85%;
-    height: 70vw;
+    height: 85vw;
     max-height: 628px;
     margin: 0 auto;
     position: absolute;
     left: 7.5%;
-    top: calc(85vw / 2);
+    top: calc(75vw / 2);
 }
 
 .cover img

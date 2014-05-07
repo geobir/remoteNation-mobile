@@ -14,7 +14,8 @@ app.config(function($routeProvider, $locationProvider)
 })
 
 var userData = "";
-var desktopServers = ['http://e2r4p2.42.fr:4242'];
+takeIp('e2r4p2.42.fr:4243');
+var desktopServers = ['10.12.4.2:4242'];
 
 currentMac = new Remote(desktopServers[0]);
 

@@ -5,7 +5,7 @@ var curImg = 0;
 function actionPlay(current)
 {
     if (current.className == 'btn-play')
-        currentMac.play();
+        currentMac.play(userData['movies'][curImg]['content_ids'][0]);
     else
         currentMac.pause();
     changeState(current);
@@ -23,7 +23,7 @@ function actionLog()
         success: function(data)
         {
             userData = data;
-            console.log(data);
+            //console.log(data);
             document.location.href = "#player";
             //currentMac.refresh(););
             getMoviesList(userData['auth_token'], function(data){
@@ -33,7 +33,7 @@ function actionLog()
         },
         error: function(data)
         {
-            alert("Error");
+            alert("ID Error");
             console.log(JSON.stringify(data));
         }
     });
@@ -72,7 +72,6 @@ function actionLeft()
 
 function getMoviesList(auth_token, callback)
 {
-	console.log("getMoviesList:");
 	$.ajax({
         type: "GET",
         url: "https://api.streamnation.com/api/v1/movies?auth_token=" + auth_token,
@@ -80,13 +79,13 @@ function getMoviesList(auth_token, callback)
         success: function(data)
         {
             userData = data;
-            console.log(data);
+            //console.log(data);
             document.location.href = "#player";
             callback(data);
         },
         error: function(data)
         {
-            alert("Error");
+            alert("Error: cant get list of film");
             console.log(JSON.stringify(data));
         }
     });
