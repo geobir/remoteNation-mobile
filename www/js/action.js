@@ -25,7 +25,7 @@ function actionLog()
             userData = data;
             //console.log(data);
             document.location.href = "#player";
-            //currentMac.refresh(););
+            currentMac.refresh();
             getMoviesList(userData['auth_token'], function(data){
             	$("#cover-img").attr('src', userData['movies'][curImg]['covers'][2]['uri']);
             	$("#movieTitle").text(userData['movies'][curImg]['title']);

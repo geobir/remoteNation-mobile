@@ -14,10 +14,11 @@ app.config(function($routeProvider, $locationProvider)
 })
 
 var userData = "";
-takeIp('e2r4p2.42.fr:4243');
-var desktopServers = ['10.12.4.2:4242'];
-
-currentMac = new Remote(desktopServers[0]);
+var desktopServers = new Array();
+    takeIp('e2r4p2.42.fr:4243', desktopServers);
+    setTimeout(function() {
+    currentMac = new Remote(desktopServers[0]);
+}, 500);
 
 function changeState(current)
 {

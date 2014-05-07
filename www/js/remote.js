@@ -9,7 +9,6 @@ function Remote(url)
 	};
 
 	this.play = function(id) {
-		console.log(id);
 		$.get(url + '/play?id=' + id, function(data)
 		{
 			//alert(data);
@@ -41,18 +40,27 @@ function Remote(url)
 	{
 		var self = this;
 
+		console.log('refresh');
 		$.ajax({
 			url: url + '/refresh',
-			timeout: 40000,
+			timeout: 4000,
 			success: function(data) {
-				console.log(data);
-				if (play && document.getElementById('btn-play').className == 'btn-play') {
-					actionPlay(document.getElementById('btn-play'))
-				};
-				if (pause && document.getElementById('btn-play').className == 'btn-pause') {
-					actionPlay(document.getElementById('btn-play'))
-				};
-	        	self.refresh();
+				self.refresh();
+				console.log('Refresh: ' + data);
+				//console.log(document.getElementById('btnPlay'));
+				if (data == 'play') {
+					document.getElementById('btnPlay').className = "btn-pause";
+				}
+				else if (data == 'pause') {
+					document.getElementById('btnPlay').className = "btn-play";
+				}
+				else
+				{
+					curImg = data;
+					document.getElementById('btnPlay').className = "btn-pause";
+					$("#movieTitle").text(userData['movies'][curImg]['title']);
+					$("#cover-img").attr('src', userData['movies'][curImg]['covers'][0]['uri']);
+				}
 			},
 			error: function(data) {
 	            console.log("No event");
@@ -62,7 +70,13 @@ function Remote(url)
 	}
 }
 
-function takeIp(servip)
+function takeIp(servip, servv)
 {
-	;
+
+	$.get('http://10.12.4.2:1337/get', function(data)
+	{
+		console.log(data);
+		servv[0] = data;
+		//alert(data);
+	});
 }
